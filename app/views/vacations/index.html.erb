@@ -1,0 +1,39 @@
+<%content_for :lnkHome do %>
+class="active"
+<%end%>
+<h1>Your vacations</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Starting at</th>
+    <th>Ending at</th>
+    <th>created_at</th>
+    <th>reason</th>
+    <th>days</th>
+    <th>status</th>
+    <th></th>
+    <th>actions</th>
+    <th></th>
+  </tr>
+
+<% @vacations.each do |vacation| %>
+  <tr>
+    <td><%= vacation.starting_at %></td>
+    <td><%= vacation.ending_at %></td>
+    <td><%= vacation.created_at %></td>
+    <td><%= vacation.reason %></td>
+    <td><%= vacation.days %></td>
+    <td><%= vacation.status %></td>
+    <td><%= link_to 'Show', vacation %></td>
+    <td><%= link_to 'Edit', edit_vacation_path(vacation) %></td>
+    <td><%= link_to 'Destroy', vacation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'admin users',admin_dashboard_path%>
+
+<h2>Total days:</h2><%= @user.totaldays%>

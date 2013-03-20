@@ -1,0 +1,44 @@
+<style type="text/css">
+select {
+	width:8%;
+}
+</style>
+<%content_for :lnkCreatVacation do %>
+class="active"
+<%end%>
+<%= form_for(@vacation) do |f| %>
+  <% if @vacation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vacation.errors.count, "error") %> prohibited this vacation from being saved:</h2>
+
+      <ul>
+      <% @vacation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    
+   <%= f.date_select :starting_at%>
+    to:
+    <%= f.date_select :ending_at %>
+  </div>
+  <div class="field" style="display: none">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+   <div class="field">
+    <h3>Reason:</h3>
+    <%= f.text_area :reason,:rows=>"10" ,:class=>"input-xxlarge"%>
+  </div>
+   <div class="field">
+    <%= f.label :days %>
+    <%= f.text_field :days ,:class=>"input-mini"%>
+  </div>
+  
+  
+    <%= f.submit "submit",:class=>"btn btn-primary"%>
+  
+<% end %>

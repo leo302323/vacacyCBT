@@ -1,0 +1,6 @@
+<%= form_tag(:controller=>"search",:action=>"doSearch", :method => "post") do %>
+  <%= label_tag(:searchday, "Search by Date:") %>
+  <%= text_field_tag(:searchday)%>
+  <%= submit_tag("Search") %>
+
+<% end%>

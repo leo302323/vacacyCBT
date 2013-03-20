@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <b>Starting at:</b>
+  <%= @vacation.starting_at %>
+</p>
+
+<p>
+  <b>Ending at:</b>
+  <%= @vacation.ending_at %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @vacation.status %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @vacation.created_at %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_vacation_path(@vacation) %> |
+<%= link_to 'Back', vacations_path %>
