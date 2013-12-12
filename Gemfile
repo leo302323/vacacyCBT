@@ -1,12 +1,12 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org/'
+source 'https://rubygems.org'
+#source 'http://ruby.taobao.org/'
 gem 'rails', '3.2.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
 # Gems used only for assets and not required
 # in production environments by default.
