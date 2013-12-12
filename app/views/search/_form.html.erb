@@ -1,6 +1,13 @@
 <%= form_tag(:controller=>"search",:action=>"doSearch", :method => "post") do %>
-  <%= label_tag(:searchday, "Search by Date:") %>
-  <%= text_field_tag(:searchday)%>
+  
+   
+     <input type="text" name="searchday" data-behaviour='datepicker' >
+     <br/>
   <%= submit_tag("Search") %>
 
 <% end%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-behaviour~=datepicker]').datepicker();
+  })
+</script>

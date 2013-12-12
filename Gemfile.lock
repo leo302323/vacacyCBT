@@ -44,6 +44,8 @@ GEM
     arel (3.0.3)
     atomic (1.1.14)
     bcrypt-ruby (3.1.1.rc1)
+    bootstrap-datepicker-rails (1.1.1.10)
+      railties (>= 3.0)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
@@ -161,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bcrypt-ruby (= 3.1.1.rc1)
+  bootstrap-datepicker-rails
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
