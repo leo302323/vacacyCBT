@@ -56,7 +56,7 @@ class VacationsController < ApplicationController
     respond_to do |format|
       if @vacation.save
         current_user.updatetotaldays
-        Notifier.create_vacation.deliver
+        Notifier.create_vacation(@vacation,current_user).deliver
         format.html { redirect_to @vacation, notice: 'Vacation was successfully created.' }
         format.json { render json: @vacation, status: :created, location: @vacation }
       else
