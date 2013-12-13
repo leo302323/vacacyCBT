@@ -1,10 +1,8 @@
 class Notifier < ActionMailer::Base
   default from: "zlw302323@163.com"
-  def create_vacation(vacation ,user)
+  def create_vacation(vacation)
       @vacation=vacation
-      @user=user
-    #  log vacation
-    #  log user
-     mail(:to =>user.manager , :subject => "A Vacation Request From "+user.name)
+      @user=vacation.user
+     mail(:to => @user.manager, :subject => "Welcome to My vacation Site")
   end
 end
